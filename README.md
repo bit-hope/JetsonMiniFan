@@ -17,6 +17,7 @@ A mini fan controller for jetson.
     1、build：
         cd JetsonMiniFan && make
 
+
     2、install：
         sudo make install
 
