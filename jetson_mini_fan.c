@@ -54,8 +54,9 @@ GenerateFactor(float* _factor_a, float* _factor_b, float* _factor_c, const stCon
 uint8_t 
 ConvertPercentToSpeedValue(float _percent)
 {
-	float _speed = _percent * 255 / 100 + 0.5f;
-	return (_speed < 255.0f) ? (uint8_t)(_speed) : 255;
+	// align with 5, for reduce whine noise, while temperature is low.
+	uint16_t _speed = ((uint16_t)(_percent * 255 / 100 + 4.5f)) / 5 * 5;
+	return (_speed < 255) ? (uint8_t)(_speed) : 255;
 }
 
 void
