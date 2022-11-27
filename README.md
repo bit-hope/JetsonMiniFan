@@ -11,7 +11,9 @@ A mini fan controller for jetson.
 已在 jetson nano 上测试通过，并长期运行。
 
 
-Usage:
+## Usage:
+
+```
     1、build：
         cd JetsonMiniFan && make
 
@@ -29,3 +31,4 @@ Usage:
         or
 
         chmod +x ./uninstall.sh && sudo ./uninstall.sh
+```
