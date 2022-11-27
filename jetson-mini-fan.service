@@ -1,0 +1,14 @@
+[Unit]
+Description=Jetson Mini Fan Control Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Restart=always
+RestartSec=5s
+StartLimitInterval=0
+ExecStart=/usr/bin/jetson_mini_fan
+
+[Install]
+WantedBy=multi-user.target
